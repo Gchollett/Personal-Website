@@ -1,0 +1,86 @@
+button {
+    background-color: green;
+    color: white;
+    border-color: darkgreen;
+    border-radius: 4px;
+    margin-left: 30px;
+    padding-left: 10px; padding-right: 10px;
+}
+
+button:hover {
+    background-color: lightgreen;
+    color: black;
+    cursor: pointer;
+}
+
+header {
+    text-align: left;
+}
+
+/* Footer at the bottom of the page */
+body {
+    background-color: seagreen;
+    color: rgb(1, 63, 38);
+    text-align: center;
+    min-height: 100%; 
+    position: relative;
+}
+
+html { height: 98%; }
+
+.footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+}
+
+/* Personal Styling */
+
+.card {
+    background-color: lightgreen;
+    color: darkgreen;
+    border: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.bar {
+    padding: 3px;
+    display: block;
+}
+
+.icon {
+    height: 60px;
+    right: 0; top: -7px;
+    position: absolute;
+}
+.icon:hover {
+    cursor: pointer;
+}
+
+.darkMode {
+    background-color: rgb(69, 68, 68);
+    color: white;
+    border-color: purple;
+}
+
+.darkModecard {
+    background-color: plum;
+    border: solid;
+    border-color: purple;
+    color: black;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.darkModeButtons {
+    background-color: purple;
+    border-color: rgb(74, 1, 74);
+}
+
+.darkModeButtons:hover {
+    background-color: plum;
+}
+
+.darkModeLink {
+    color: yellow;
+}
