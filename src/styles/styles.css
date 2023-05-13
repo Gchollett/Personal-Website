@@ -15,6 +15,7 @@ button:hover {
 
 header {
     text-align: left;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.616);
 }
 
 /* Footer at the bottom of the page */
@@ -41,6 +42,7 @@ html { height: 98%; }
     border: solid;
     border-width: 3px;
     border-radius: 10px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.616)
 }
 
 .bar {
@@ -64,6 +66,7 @@ html { height: 98%; }
 }
 
 .darkModecard {
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.616);
     background-color: plum;
     border: solid;
     border-color: purple;

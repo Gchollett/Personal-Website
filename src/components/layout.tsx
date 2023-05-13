@@ -25,14 +25,6 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     console.log(stuff)
     moon = stuff.moon;
     style = stuff.style;
-    // if(darkMode){
-    //     moon = fullMoon
-    //     style = "darkMode"
-    // }
-    // else{
-    //     moon = darkMoon
-    //     style = ""
-    // }
     useBodyClasses(style)
     const date = new Date().getFullYear();
     useEffect(() => setCurrentPage(() => getURL()))
@@ -51,7 +43,7 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
             <div className={style+"card"}>
                 {children}
             </div>
-            <div className={style} style={{paddingTop: "80px"}}></div>
+            <div style={{paddingTop: "80px"}}></div>
             <footer className={"footer " + style}>
                 <h3 style={{marginBottom:"-2px"}}>Fun Links!</h3>
                 <div style={{display: "inline-block", paddingBottom: "5px"}}>
