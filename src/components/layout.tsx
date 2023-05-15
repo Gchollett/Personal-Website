@@ -5,6 +5,8 @@ import { getURL } from "next/dist/shared/lib/utils";
 import { useRouter } from "next/router";
 import useBodyClasses from "../hooks/use-body-classes";
 import useDarkMode, { changeDarkMode, getLocal } from "../hooks/use-darkMode";
+import Head from "next/head";
+import Logo from "../resources/Logo.png"
 
 const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     const router = useRouter();
@@ -23,6 +25,10 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     const tags = getCurrentPage(currentPage);
     return (
         <div className={darkMode.style}>
+            <Head>
+                <title>Garrett's Website</title>
+                <link rel="icon" href={Logo.src}></link>
+            </Head>
             <header className={"bar "+ darkMode.style}>
                 <Link href="/" style={{paddingLeft: "15px",color:"inherit",textDecoration:"inherit", fontSize:"20px", fontFamily:"cursive"}}>{tags[3]}</Link>
                 <img className="icon" src={darkMode.moon.src} alt="darkModeIcon"  onClick={() => {changeDarkMode(darkMode); setDmState(!dmState)}}></img>
