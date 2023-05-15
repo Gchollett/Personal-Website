@@ -1,7 +1,12 @@
 import { NextPage } from "next";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const Business: NextPage = () => {
+    var screenWidth = 1280;
+    useEffect(() => {
+        screenWidth = screen.availWidth;
+    })
     return (
         <div>
             <h1>Getting Down to Business</h1>
@@ -16,7 +21,7 @@ const Business: NextPage = () => {
             <iframe 
                 src="https://docs.google.com/document/d/e/2PACX-1vTzd7MRhq9_2PQX1Uscvc4kHwFFwCHPkH5qIOXILvMrdxvPUcSNGpaQ9qvBHTnTBgpbMnMiL0ifqvva/pub?embedded=true" 
                 height={"1312px"} 
-                width={"830px"}
+                width={screenWidth-450}
                 style={{display: "inline-block", margin: "0 auto", border: "none"}}
                 />
         </div>
