@@ -46,13 +46,19 @@ html { height: 98%; }
 }
 
 .bar {
-    padding: 3px;
+    padding-bottom: 3px;
     display: block;
+    position: sticky;
+    top: 0;
+    background-color: seagreen;
+    border-bottom: 2px solid;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 .icon {
-    height: 60px;
-    right: 0; top: -7px;
+    height: 55px;
+    right: 10px; top: -1px;
     position: absolute;
 }
 .icon:hover {

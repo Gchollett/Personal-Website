@@ -13,6 +13,10 @@ const useDarkMode = () => {
             localStorage.setItem("darkMode",JSON.stringify(darkMode))
         }   
     })
+    return {
+        moon: fullMoon,
+        style: ""
+    }
 }
 
 
@@ -25,13 +29,12 @@ export const changeDarkMode = (current: {moon: StaticImageData,style: string}) =
         ret.moon = darkMoon
         ret.style = "darkMode"
     }
-    console.log(ret)
     localStorage.setItem("darkMode",JSON.stringify(ret))
 }
 
 export const getLocal = () => {
     const local = localStorage.getItem("darkMode")
-    if( local === null){
+    if(local === null){
         return JSON.stringify({
             moon: fullMoon,
             style: ""
