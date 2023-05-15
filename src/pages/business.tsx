@@ -1,11 +1,13 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Business: NextPage = () => {
-    var screenWidth = 1280;
+    const [width, setWidth] = useState(830);
+    const heightWidthRatio = 656/415
+    const resumeWidthScreenWidthRatio = 83/128
     useEffect(() => {
-        screenWidth = screen.availWidth;
+        setWidth(screen.width*resumeWidthScreenWidthRatio);
     })
     return (
         <div>
@@ -20,8 +22,8 @@ const Business: NextPage = () => {
             <h2>Resume</h2>
             <iframe 
                 src="https://docs.google.com/document/d/e/2PACX-1vTzd7MRhq9_2PQX1Uscvc4kHwFFwCHPkH5qIOXILvMrdxvPUcSNGpaQ9qvBHTnTBgpbMnMiL0ifqvva/pub?embedded=true" 
-                height={"1312px"} 
-                width={screenWidth-450}
+                height={width*heightWidthRatio} 
+                width={width}
                 style={{display: "inline-block", margin: "0 auto", border: "none"}}
                 />
         </div>
