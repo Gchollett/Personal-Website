@@ -46,6 +46,7 @@ html { height: 98%; }
 }
 
 .bar {
+    padding-top: 10px;
     padding-bottom: 3px;
     display: block;
     position: sticky;
@@ -58,7 +59,7 @@ html { height: 98%; }
 
 .icon {
     height: 55px;
-    right: 10px; top: -1px;
+    right: 10px; top: 5px;
     position: absolute;
 }
 .icon:hover {

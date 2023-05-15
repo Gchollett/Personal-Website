@@ -4,10 +4,13 @@ import { useEffect, useState } from "react";
 
 const Business: NextPage = () => {
     const [width, setWidth] = useState(830);
+    const [scalingFactor, setScalingFactor] = useState(1)
     const heightWidthRatio = 656/415
     const resumeWidthScreenWidthRatio = 83/128
+    console.log(scalingFactor)
     useEffect(() => {
         setWidth(screen.width*resumeWidthScreenWidthRatio);
+        setScalingFactor(width/830)
     })
     return (
         <div>
@@ -22,9 +25,15 @@ const Business: NextPage = () => {
             <h2>Resume</h2>
             <iframe 
                 src="https://docs.google.com/document/d/e/2PACX-1vTzd7MRhq9_2PQX1Uscvc4kHwFFwCHPkH5qIOXILvMrdxvPUcSNGpaQ9qvBHTnTBgpbMnMiL0ifqvva/pub?embedded=true" 
-                height={width*heightWidthRatio} 
-                width={width}
-                style={{display: "inline-block", margin: "0 auto", border: "none"}}
+                style={{
+                    height: width*heightWidthRatio,
+                    width: width,
+                    display: "inline-block", 
+                    margin: "0 auto", 
+                    border: "none",
+                    transform: "perspective(-100px) scale("+scalingFactor+")",
+                    
+                }}
                 />
         </div>
     );
