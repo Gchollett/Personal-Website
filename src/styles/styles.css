@@ -170,19 +170,19 @@ html { height: 98%; }
     background-color: plum;
 }
 
-.darkMode a:link {
+.darkMode footer a:link {
     color: yellow;
 }
 
-.darkMode a {
+.darkMode footer a {
     color: pink;
 }
 
-.darkMode .business a:link{
+.darkMode a:link{
     color: blue;
 }
 
-.darkMode .business a {
+.darkMode a {
     color: purple;
 }
 
