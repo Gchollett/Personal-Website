@@ -73,8 +73,14 @@ html { height: 98%; }
 /* Gallary */
 
 .gallary {
-    display: inline;
     width: 100%;
+}
+
+.gallary-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: max-content;
+    margin: 0 auto;
 }
 
 .flip-card img{
@@ -83,10 +89,10 @@ html { height: 98%; }
 }
 
 .flip-card {
+    position: relative;
     background-color: transparent;
     height: 300px;
     width: 225px;
-    /* border: 1px solid #f1f1f1; */
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin: 10px;
   }
@@ -126,11 +132,16 @@ html { height: 98%; }
   /* Style the back side */
   .flip-card-back {
     border-radius: 10px;
-    text-align: center;
     font-family:'Courier New', Courier, monospace;
-    background-color: purple;
+    background-color: grey;
     color: white;
     transform: rotateY(180deg);
+  }
+
+  .flip-card-back p {
+    position: absolute;
+    top: 100px;
+    width: 100%
   }
 
 /* DarkMode */

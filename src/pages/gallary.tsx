@@ -19,27 +19,26 @@ const Gallary: NextPage = () => {
                 It's just some pictures of me and some friends that I think best represents me.
             </p>
             <div className="gallary">
-                {/* {flipImage(fountainDunk1.src,(
-                    <h1>First Fountain Dunk</h1>
-                ))} */}
-                {flipImage(meAndBae.src,(
-                    <p>My girlfirend and I failing to make a heart around Leeroy!</p>
-                ))}
-                {flipImage(bestie.src,(
-                    <p>My bestfriend and I after my second bday dunk!</p>
-                ))}
-                {flipImage(pug.src,(
-                    <p>My pug Penelope {"<"}3</p>
-                ))}
-                {flipImage(fountainDunk2.src,(
-                    <p>A group photo of my friends and I after my second dunk!</p>
-                ))}
-                {flipImage(hsGraduation.src,(
-                    <p>Me at my high school graduation!</p>
-                ))}
-                {flipImage(leeroy.src,(
-                    <p>Leeroy and I on the first day at Trinity!</p>
-                ))}
+                <div className="gallary-inner">
+                    {flipImage(meAndBae.src,(
+                        <p>My girlfirend and I failing to make a heart around Leeroy!</p>
+                    ))}
+                    {flipImage(bestie.src,(
+                        <p>My bestfriend and I after my second bday dunk!</p>
+                    ))}
+                    {flipImage(pug.src,(
+                        <p>My pug Penelope {"<"}3</p>
+                    ))}
+                    {flipImage(fountainDunk2.src,(
+                        <p>A group photo of my friends and I after my second dunk!</p>
+                    ))}
+                    {flipImage(hsGraduation.src,(
+                        <p>Me at my high school graduation!</p>
+                    ))}
+                    {flipImage(leeroy.src,(
+                        <p>Leeroy and I on the first day at Trinity!</p>
+                    ))}
+                </div>
             </div>
             </div>
         </div>
