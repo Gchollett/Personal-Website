@@ -133,7 +133,7 @@ html { height: 98%; }
   .flip-card-back {
     border-radius: 10px;
     font-family:'Courier New', Courier, monospace;
-    background-color: grey;
+    background-color: seagreen;
     color: white;
     transform: rotateY(180deg);
   }
@@ -151,7 +151,7 @@ html { height: 98%; }
     border-color: purple;
 }
 
-.darkModecard {
+.darkMode .card {
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.616);
     background-color: plum;
     border: solid;
@@ -161,15 +161,31 @@ html { height: 98%; }
     border-radius: 10px;
 }
 
-.darkModeButtons {
+.darkMode button {
     background-color: purple;
     border-color: rgb(74, 1, 74);
 }
 
-.darkModeButtons:hover {
+.darkMode button:hover {
     background-color: plum;
 }
 
-.darkModeLink {
+.darkMode a:link {
     color: yellow;
+}
+
+.darkMode a {
+    color: pink;
+}
+
+.darkMode .business a:link{
+    color: blue;
+}
+
+.darkMode .business a {
+    color: purple;
+}
+
+.darkMode .flip-card-back {
+    background-color: rgb(69, 68, 68);
 }

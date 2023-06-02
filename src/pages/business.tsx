@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const Business: NextPage = () => {
     return (
-        <div>
+        <div className="business">
             <h1>Getting Down to Business</h1>
             <p>
                 I am currently a student at Trinity University. <br/>

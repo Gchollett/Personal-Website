@@ -29,7 +29,7 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                 <title>Garrett's Website</title>
                 <link rel="icon" href={Logo.src}></link>
             </Head>
-            <header className={"bar "+ darkMode.style}>
+            <header className="bar">
                 <Link href="/" style={{paddingLeft: "15px",color:"inherit",textDecoration:"inherit", fontSize:"20px", fontFamily:"cursive"}}>{tags[3]}</Link>
                 <img className="icon" src={darkMode.moon.src} alt="darkModeIcon"  onClick={() => {changeDarkMode(darkMode); setDmState(!dmState)}}></img>
                 <div style={{textAlign:"center"}}>
@@ -38,15 +38,15 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                     <button className={darkMode.style+"Buttons"} onClick={() => router.push("/gallary")}>{tags[2]}</button>
                 </div>
             </header>
-            <div className={darkMode.style+"card"}>
+            <div className="card">
                 {children}
             </div>
             <div style={{paddingTop: "80px"}}></div>
             <footer className={"footer " + darkMode.style}>
                 <h3 style={{marginBottom:"-2px"}}>Fun Links!</h3>
                 <div style={{display: "inline-block", paddingBottom: "5px"}}>
-                <Link className={darkMode.style+"Link"} href="https://github.com/Gchollett" target="_blank">gitHub</Link>
-                <Link className={darkMode.style+"Link"} style={{paddingLeft:"10px"}} href="https://www.linkedin.com/in/garrett-jb-chollett/" target="_blank">LinkedIn</Link>
+                <Link href="https://github.com/Gchollett" target="_blank">gitHub</Link>
+                <Link style={{paddingLeft:"10px"}} href="https://www.linkedin.com/in/garrett-jb-chollett/" target="_blank">LinkedIn</Link>
                 </div>
                 <br/>
                 DoubleIt Inc. {date}
