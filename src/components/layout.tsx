@@ -29,15 +29,15 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                 <title>Garrett's Website</title>
                 <link rel="icon" href={Logo.src}></link>
             </Head>
-            <header className="bar">
-                <Link href="/" style={{paddingLeft: "15px",color:"inherit",textDecoration:"inherit", fontSize:"20px", fontFamily:"cursive"}}>{tags[3]}</Link>
-                <img className="icon" src={darkMode.moon.src} alt="darkModeIcon"  onClick={() => {changeDarkMode(darkMode); setDmState(!dmState)}}></img>
-                <div style={{textAlign:"center"}}>
+            <div className="bar">
+                <Link href="/" className="title">{tags[3]}</Link>
+                <div className="menu">
                     <button className={darkMode.style+"Buttons"} onClick={() => router.push("/interests")}>{tags[0]}</button>
                     <button className={darkMode.style+"Buttons"} onClick={() => router.push("/business")}>{tags[1]}</button>
                     <button className={darkMode.style+"Buttons"} onClick={() => router.push("/gallary")}>{tags[2]}</button>
                 </div>
-            </header>
+                <img className="icon" src={darkMode.moon.src} alt="darkModeIcon"  onClick={() => {changeDarkMode(darkMode); setDmState(!dmState)}}/>
+            </div>
             <div className="card">
                 {children}
             </div>
