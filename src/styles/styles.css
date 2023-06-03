@@ -18,8 +18,14 @@ header {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.616);
 }
 
-.card img {
-    height: 300px;
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.container img {
+    max-width: 70%;
     border-radius: 10px;
     box-shadow: 3px 3px 10px black;
     margin: 0 auto;
@@ -40,6 +46,7 @@ html { height: 98%; }
     position: absolute;
     bottom: 0; left: 0; right: 0;
 }
+
 
 /* Personal Styling */
 
@@ -84,10 +91,12 @@ html { height: 98%; }
 }
 
 .gallary-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: max-content;
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: space-evenly;
+    
 }
 
 .flip-card img{

@@ -12,7 +12,9 @@ const Home: NextPage = () => {
                 I'm currently a student at Trinity University, double majoring in computer science and mathematics.        
             </p>
             <figure>
-                <img src={firstDunk.src}/>
+                <div className="container">
+                    <img src={firstDunk.src}/>
+                </div>
                 <figcaption><strong>&uarr;</strong></figcaption>
                 <figcaption>That is me!</figcaption>
             </figure>

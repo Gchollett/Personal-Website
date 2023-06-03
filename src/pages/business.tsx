@@ -13,7 +13,7 @@ const Business: NextPage = () => {
                 cell: <a href="tel:2546617095">(254) 661-7095</a>
             </p>
             <h2>Resume</h2>
-            <div>
+            <div className="container">
                 <iframe 
                     height={100}
                     className="resume"
