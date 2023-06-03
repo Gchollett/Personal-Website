@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { useRouter } from "next/router";
+import FlipImage from "../components/flip-image";
 import fountainDunk1 from "../resources/FountainDunk1.png"
 import bestie from "../resources/Bestie.png"
 import meAndBae from "../resources/MeAndBae.png"
@@ -7,12 +7,10 @@ import pug from "../resources/Pug.png"
 import fountainDunk2 from "../resources/FountatinDunk2.png"
 import leeroy from "../resources/Leeroy.png"
 import hsGraduation from "../resources/HsGradutation.png"
-import flipImage from "../components/flip-image";
+
 const Gallary: NextPage = () => {
-    const router = useRouter(); 
     return (
-        <div>
-            <div>
+        <>
             <h1>Gallary</h1>
             <p>
                 This is my Gallary. <br/>
@@ -20,28 +18,27 @@ const Gallary: NextPage = () => {
             </p>
             <div className="gallary">
                 <div className="gallary-inner">
-                    {flipImage(meAndBae.src,(
+                    <FlipImage src={meAndBae.src}>
                         <p>My girlfirend and I failing to make a heart around Leeroy!</p>
-                    ))}
-                    {flipImage(bestie.src,(
+                    </FlipImage>
+                    <FlipImage src={bestie.src}>
                         <p>My bestfriend and I after my second bday dunk!</p>
-                    ))}
-                    {flipImage(pug.src,(
+                    </FlipImage>
+                    <FlipImage src={pug.src}>
                         <p>My pug Penelope {"<"}3</p>
-                    ))}
-                    {flipImage(fountainDunk2.src,(
+                    </FlipImage>
+                    <FlipImage src={fountainDunk2.src}>
                         <p>A group photo of my friends and I after my second dunk!</p>
-                    ))}
-                    {flipImage(hsGraduation.src,(
+                    </FlipImage>
+                    <FlipImage src={hsGraduation.src}>
                         <p>Me at my high school graduation!</p>
-                    ))}
-                    {flipImage(leeroy.src,(
+                    </FlipImage>
+                    <FlipImage src={leeroy.src}>
                         <p>Leeroy and I on the first day at Trinity!</p>
-                    ))}
+                    </FlipImage>
                 </div>
             </div>
-            </div>
-        </div>
+        </>
     );
 };
 

@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const Business: NextPage = () => {
     return (

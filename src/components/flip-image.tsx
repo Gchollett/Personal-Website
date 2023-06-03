@@ -1,18 +1,23 @@
-import { ReactNode } from "react"
+import { FunctionComponent, ReactNode } from "react"
 
-const flipImage = (imageSrc : string, content : ReactNode) => {
+type Props = {
+    src : string,
+    children? : ReactNode
+}
+
+const FlipImage : FunctionComponent<Props> = (props) => {
     return (
         <div className="flip-card">
             <div className="flip-card-inner">
                 <div className="flip-card-front">
-                    <img src={imageSrc}></img>
+                    <img src={props.src}></img>
                 </div>
                 <div className="flip-card-back">
-                    {content}
+                    {props.children}
                 </div>
             </div>
         </div>
     )
 }
 
-export default flipImage
+export default FlipImage
