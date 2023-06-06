@@ -13,7 +13,7 @@ const Interests: NextPage = () => {
                     <br/>Legos
                     <br/>Movies
                     <br/>Video Games
-                    <br/>Vinyl Records
+                    <br/><a href="/records">Vinyl Records</a>
                     <br/>Coding
                     <br/>Game Design
             </p>

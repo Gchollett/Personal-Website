@@ -1,3 +1,20 @@
+:root  {
+    --primary-text: rgb(1, 63, 38);
+    --primary: seagreen;
+    --secondary: lightgreen;
+    --secondary-text: darkgreen;
+    --menu-text: white;
+    --menu-button: green;
+    --menu-text-hover: black;
+    --menu-button-hover: lightgreen;
+    --shadow: black;
+    --flipcard-text: white;
+
+    --primary-dm-text: white;
+    --primary-dm: rgb(69, 68, 68);
+    --secondary-dm: plum;
+}
+
 .container {
     display: flex;
     width: 100%;
@@ -6,13 +23,13 @@
 .container img {
     max-width: 70%;
     border-radius: 10px;
-    box-shadow: 3px 3px 10px black;
+    box-shadow: 3px 3px 10px var(--shadow);
     margin: 0 auto;
 }
 
 body {
-    background-color: seagreen;
-    color: rgb(1, 63, 38);
+    background-color: var(--primary);
+    color: var(--primary-text);
     min-height: 100%; 
     position: relative;
 }
@@ -31,8 +48,8 @@ html { height: 98%; }
 /* Personal Styling */
 .card {
     text-align: center;
-    background-color: lightgreen;
-    color: darkgreen;
+    background-color: var(--secondary);
+    color: var(--secondary-text);
     border: solid;
     border-width: 3px;
     border-radius: 10px;
@@ -81,15 +98,15 @@ html { height: 98%; }
 }
 
 .menu button {
-    background-color: green;
-    color: white;
-    border-color: darkgreen;
+    background-color: var(--menu-button);
+    color: var(--menu-text);
+    border-color: var(--secondary-text);
     border-radius: 4px;
 }
 
 .menu button:hover {
-    background-color: lightgreen;
-    color: black;
+    background-color: var(--menu-button-hover);
+    color: var(--menu-text-hover);
     cursor: pointer;
 }
 
@@ -154,21 +171,21 @@ html { height: 98%; }
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    box-shadow: 3px 3px 10px black;
+    box-shadow: 3px 3px 10px var(--shadow);
   }
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: #bbb;
-    color: black;
+    color: var(--shadow);
   }
   
   /* Style the back side */
   .flip-card-back {
     border-radius: 10px;
     font-family:'Courier New', Courier, monospace;
-    background-color: seagreen;
-    color: white;
+    background-color: var(--primary);
+    color: var(--flipcard-text);
     transform: rotateY(180deg);
   }
 
@@ -178,6 +195,43 @@ html { height: 98%; }
     width: 100%
   }
 
+/* Vinyls */
+.roladex {
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    border: solid;
+    border-radius: 10px;
+    width: 100%;
+    gap: 5px;
+}
+
+.roladex-item {
+    width: 6px;
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.roladex-item:hover {
+    width: auto;
+    height: 100%;
+    background-color: unset;
+}
+
+.roladex-item:hover img{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.roladex-item img {
+    transform: rotateY(90deg);
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--shadow);
+}
+
 /* DarkMode */
 .darkMode {
     background-color: rgb(69, 68, 68);
@@ -186,7 +240,7 @@ html { height: 98%; }
 }
 
 .darkMode .card {
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.616);
+    box-shadow: 5px 5px 3px var(--shadow);
     background-color: plum;
     border: solid;
     border-color: purple;
