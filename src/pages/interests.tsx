@@ -9,7 +9,7 @@ const Interests: NextPage = () => {
                 I am many things. Above all, I am a nerd. Here are some of my nerdy interests: <br/><br/>
                     <Link href="https://archidekt.com/search/decks?owner=Gmoney7896&ownerexact=false" target="_blank">Magic the Gathering</Link> 
                     <br/>Dnd
-                    <br/>Funko Pops
+                    <br/><a href="/funkos">Funko Pops</a>
                     <br/>Legos
                     <br/>Movies
                     <br/>Video Games
