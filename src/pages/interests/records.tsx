@@ -1,7 +1,7 @@
 import { NextPage } from "next";
-import Roladex, { RoladexItem } from "../components/roladex";
-import FMacRumors from '../resources/Records/FMacRumours.png'
-import CMIYGL from '../resources/Records/Call Me if You Get Lost Record.jpg'
+import Roladex, { RoladexItem } from "../../components/roladex";
+import FMacRumors from '../../resources/Records/FMacRumours.png'
+import CMIYGL from '../../resources/Records/Call Me if You Get Lost Record.jpg'
 
 
 const Records:NextPage = () => {

@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import Shelf, { ShelfItem } from "../components/shelves";
-import { AxeGroot, CookieGrogu, DwightSchrute, EdwardElric, Finn, Hancock, JohnWick, JynErso, K2SO, LilGroot, RoyMustang, SpeederMando, T51, kitBull, tbc } from "../resources/imageData";
+import Shelf, { ShelfItem } from "../../components/shelves";
+import { AxeGroot, CookieGrogu, DwightSchrute, EdwardElric, Finn, Hancock, JohnWick, JynErso, K2SO, LilGroot, RoyMustang, SpeederMando, T51, kitBull, tbc } from "../../resources/imageData";
 
 
 const Funko:NextPage = () => {

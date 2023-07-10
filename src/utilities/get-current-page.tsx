@@ -1,12 +1,11 @@
-import { useRouter } from "next/router";
 
 const getCurrentPage = (currentPage:string) => {
-    switch(currentPage) {
-        case "/interests":
+    switch(true) {
+        case currentPage.includes("/interests"):
             return [<u>Interests</u>,"Business","Gallary","Garrett's Website"]
-            case "/business":
-                return ["Interests",<u>Business</u>,"Gallary","Garrett's Website"]
-            case "/gallary":
+        case currentPage.includes("/business"):
+            return ["Interests",<u>Business</u>,"Gallary","Garrett's Website"]
+        case currentPage.includes("/gallary"):
             return ["Interests","Business",<u>Gallary</u>,"Garrett's Website"]
         default:
             return ["Interests","Business","Gallary",<u>Garrett's Website</u>]

@@ -1,6 +1,5 @@
 import { NextPage } from "next";
-import FlipImage from "../components/flip-image";
-import firstDunk from '../resources/FountainDunk1.png'
+import firstDunk from '../resources/gallary/FountainDunk1.png'
 
 const Home: NextPage = () => {
     return (

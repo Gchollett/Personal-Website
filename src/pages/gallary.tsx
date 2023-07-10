@@ -1,12 +1,11 @@
 import { NextPage } from "next";
 import FlipImage from "../components/flip-image";
-import fountainDunk1 from "../resources/FountainDunk1.png"
-import bestie from "../resources/Bestie.png"
-import meAndBae from "../resources/MeAndBae.png"
-import pug from "../resources/Pug.png"
-import fountainDunk2 from "../resources/FountatinDunk2.png"
-import leeroy from "../resources/Leeroy.png"
-import hsGraduation from "../resources/HsGradutation.png"
+import bestie from "../resources/gallary/Bestie.png"
+import meAndBae from "../resources/gallary/MeAndBae.png"
+import pug from "../resources/gallary/Pug.png"
+import fountainDunk2 from "../resources/gallary/FountatinDunk2.png"
+import leeroy from "../resources/gallary/Leeroy.png"
+import hsGraduation from "../resources/gallary/HsGradutation.png"
 
 const Gallary: NextPage = () => {
     return (
