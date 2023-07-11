@@ -10,7 +10,7 @@ const Interests: NextPage = () => {
                     <br/><a href="/interests/dnd">Dnd</a>
                     <br/><a href="/interests/funkos">Funko Pops</a>
                     <br/>Legos
-                    <br/>Movies
+                    <br/><a href="https://letterboxd.com/tarterbruh/films/" target="_blank">Movies</a>
                     <br/>Shows
                     <br/>Video Games
                     <br/><a href="/interests/records">Vinyl Records</a>
