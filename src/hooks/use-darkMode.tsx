@@ -5,7 +5,7 @@ import { StaticImageData } from 'next/image';
 
 const useDarkMode = () => {
     useEffect(() => {
-        if(localStorage.getItem("darkMode") === null){
+        if(localStorage.getItem("darkMode") === null && localStorage.getItem("cookieConsent") !== null){
             var darkMode = {
                 moon: fullMoon,
                 style: ""
@@ -29,7 +29,9 @@ export const changeDarkMode = (current: {moon: StaticImageData,style: string}) =
         ret.moon = darkMoon
         ret.style = "darkMode"
     }
-    localStorage.setItem("darkMode",JSON.stringify(ret))
+    if(localStorage.getItem("cookieConsent") !== null){
+        localStorage.setItem("darkMode",JSON.stringify(ret))
+    }
 }
 
 export const getLocal = () => {

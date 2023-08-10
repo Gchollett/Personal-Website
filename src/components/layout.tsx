@@ -13,6 +13,18 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     const [currentPage, setCurrentPage] = useState("/")
     const [dmState, setDmState] = useState(false);
     const [darkMode, setDarkMode] = useState(useDarkMode())
+    const [cookieConsent,setCookieConsent] = useState(
+    <div className="cookie">
+        <p>
+            Want some Cookies?
+        </p>
+        <button onClick={() => {
+                localStorage.setItem("cookieConsent","true");
+                setCookieConsent(<></>);
+            }}>Yes!</button>
+        <button onClick={()=>setCookieConsent(<></>)}>No.</button>
+    </div>
+    )
     useEffect(() => {
         setDarkMode({
             moon: JSON.parse(getLocal()).moon,
@@ -22,9 +34,15 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     useBodyClasses(darkMode.style)
     const date = new Date().getFullYear();
     useEffect(() => setCurrentPage(() => getURL()))
+    useEffect(() => {
+        if(localStorage.getItem("cookieConsent") !== null){
+            setCookieConsent(<></>)
+        }
+    },[])
     const tags = getCurrentPage(currentPage);
     return (
         <div className={darkMode.style}>
+            {cookieConsent}
             <Head>
                 <title>Garrett's Website</title>
                 <link rel="icon" href={Logo.src}></link>
