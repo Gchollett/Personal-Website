@@ -6,7 +6,7 @@ import 'reactjs-popup/dist/index.css'
 type Props = {
     cookieConsent: string | null,
 }
-
+// Testing I set up git correctly
 const CookiePopup : FunctionComponent<Props> = (props) => {
     if(props.cookieConsent === null){
         return (
