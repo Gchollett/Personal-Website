@@ -1,74 +1,31 @@
 import Link from "next/link";
 import { FunctionComponent, PropsWithChildren, useEffect, useState} from "react";
-import getCurrentPage from "../utilities/get-current-page";
-import { getURL } from "next/dist/shared/lib/utils";
-import { useRouter } from "next/router";
-import useBodyClasses from "../hooks/use-body-classes";
-import useDarkMode, { changeDarkMode, getLocal } from "../hooks/use-darkMode";
 import Head from "next/head";
 import Logo from "../resources/Logo.png"
+import DarkModeButton from "./dark-mode-button";
+import Menu from "./menu";
+import Title from "./title";
+import CookiePopup from "./cookie-popup";
+import Footer from "./footer";
 
 const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
-    const router = useRouter();
-    const [currentPage, setCurrentPage] = useState("/")
-    const [dmState, setDmState] = useState(false);
-    const [darkMode, setDarkMode] = useState(useDarkMode())
-    const [cookieConsent,setCookieConsent] = useState(
-    <div className="cookie">
-        <p>
-            Want some Cookies?
-        </p>
-        <button onClick={() => {
-                localStorage.setItem("cookieConsent","true");
-                setCookieConsent(<></>);
-            }}>Yes!</button>
-        <button onClick={()=>setCookieConsent(<></>)}>No.</button>
-    </div>
-    )
-    useEffect(() => {
-        setDarkMode({
-            moon: JSON.parse(getLocal()).moon,
-            style: JSON.parse(getLocal()).style
-    })
-    },[dmState])
-    useBodyClasses(darkMode.style)
-    const date = new Date().getFullYear();
-    useEffect(() => setCurrentPage(() => getURL()))
-    useEffect(() => {
-        if(localStorage.getItem("cookieConsent") !== null){
-            setCookieConsent(<></>)
-        }
-    },[])
-    const tags = getCurrentPage(currentPage);
     return (
-        <div className={darkMode.style}>
-            {cookieConsent}
+        <div>
             <Head>
                 <title>Garrett's Website</title>
                 <link rel="icon" href={Logo.src}></link>
             </Head>
+            <CookiePopup/>
             <div className="bar">
-                <Link href="/" className="title">{tags[3]}</Link>
-                <div className="menu">
-                    <button className={darkMode.style+"Buttons"} onClick={() => router.push("/interests")}>{tags[0]}</button>
-                    <button className={darkMode.style+"Buttons"} onClick={() => router.push("/business")}>{tags[1]}</button>
-                    <button className={darkMode.style+"Buttons"} onClick={() => router.push("/gallary")}>{tags[2]}</button>
-                </div>
-                <img className="icon" src={darkMode.moon.src} alt="darkModeIcon"  onClick={() => {changeDarkMode(darkMode); setDmState(!dmState)}}/>
+                <Title/>
+                <Menu/>
+                <DarkModeButton/>
             </div>
             <div className="card">
                 {children}
             </div>
-            <div style={{paddingTop: "80px"}}></div>
-            <footer className={"footer " + darkMode.style}>
-                <h3 style={{marginBottom:"-2px"}}>Fun Links!</h3>
-                <div style={{display: "inline-block", paddingBottom: "5px"}}>
-                <Link href="https://github.com/Gchollett" target="_blank">gitHub</Link>
-                <Link style={{paddingLeft:"10px"}} href="https://www.linkedin.com/in/garrett-jb-chollett/" target="_blank">LinkedIn</Link>
-                </div>
-                <br/>
-                DoubleIt Inc. {date}
-            </footer>
+            <div style={{paddingTop: "100px"}}></div>
+            <Footer/>
         </div>
     )
 }

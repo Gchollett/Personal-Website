@@ -1,33 +1,34 @@
-import { FunctionComponent, useEffect, useState } from 'react';
-import 'reactjs-popup'
-import Popup from 'reactjs-popup'
-import 'reactjs-popup/dist/index.css'
+import { useEffect, useState } from 'react';
 
-type Props = {
-    cookieConsent: string | null,
-}
-const CookiePopup : FunctionComponent<Props> = (props) => {
-    if(props.cookieConsent === null){
-        return (
-            <>
-                <Popup open modal>
-                    <>
-                        <div>
-                            Do you want cookies?
-                        </div>
-                        <div>
-                            <button onClick={()=>{
-                                localStorage.setItem('cookieConsent','true');
-                            }}>Yes!</button>
-                            <button onClick={() => {close()}}>No.</button>
-                        </div>
-                    </>
-                </Popup>
-            </>
-        )
-    } else {
-        return (<></>)
+const CookiePopup = () => {
+    const [showPopup, setShowPopup] = useState(true);
+
+    const handleAccept = () => {
+        localStorage.setItem('cookieConsent','accepted')
+        setShowPopup(false);
     }
-}
 
-export default CookiePopup
+    const handleReject = () => {
+        localStorage.setItem('cookieConsent','rejected')
+        setShowPopup(false);
+    }
+
+    useEffect(() => {
+        setShowPopup(localStorage.getItem('cookieConsent') === 'rejected')
+    })
+
+    return (
+        <>
+        {showPopup && (
+            <div className="cookie-popup">
+            <h1>This website uses cookies</h1>
+            <p>By clicking accept, you agree to our use of cookies.</p>
+            <button onClick={handleAccept}>Accept</button>
+            <button onClick={handleReject}>Reject</button>
+            </div>
+        )}
+        </>
+    );
+};
+
+export default CookiePopup;

@@ -1,4 +1,4 @@
-:root  {
+:root {
     --primary-text: rgb(1, 63, 38);
     --primary: seagreen;
     --secondary: lightgreen;
@@ -6,16 +6,33 @@
     --menu-text: white;
     --menu-button: green;
     --menu-text-hover: black;
-    --menu-button-hover: lightgreen;
     --shadow: black;
     --flipcard-text: white;
-
-    --primary-dm-text: white;
-    --primary-dm: rgb(69, 68, 68);
-    --secondary-dm: plum;
 }
 
-.cookie {
+[data-theme="dark"] {
+    --primary-text: black;
+    --primary: rgb(69, 68, 68);
+    --secondary: plum;
+    --secondary-text: rgb(105, 1, 105);
+    --menu-button: purple;
+    --menu-text: black;
+    --menu-text-hover: black;
+    --flipcard-text: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer img{
+    height: 30px;
+}
+
+.cookie-popup {
     color: black;
     background-color: white;
     width: 50%;
@@ -26,7 +43,7 @@
     padding-bottom: 5px;
 }
 
-.cookie button {
+.cookie-popup button {
     margin-inline: 5px;
 }
 
@@ -53,14 +70,6 @@ body {
 
 html { height: 98%; }
 
-.footer {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-
 /* Personal Styling */
 .card {
     text-align: center;
@@ -74,43 +83,37 @@ html { height: 98%; }
 
 /* Header */
 .bar {
-    display: grid;
+    flex-direction: row;
+    display: flex;
     width: 100%;
+    height: 70px;
+    /* border: solid; */
 }
 
 .title {
-    margin: 0 auto;
+    position: absolute;
+    width: 50%;
+    left: 25%;
     color: inherit;
     text-decoration: inherit;
     font-family: cursive;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.616);
     margin-bottom: 10px;
     font-size: 120%;
-}
-
-.icon {
-    margin-left: auto;
-    height: 45px;
-    position: static;
-    top: 5px;
-    right: 5px;
-    position: absolute;
-
-}
-
-.icon:hover {
-    cursor: pointer;
+    text-align: center;
 }
 
 .menu {
-    margin: 0 auto;
+    position: absolute;
+    left: 25%;
+    width: 50%;
     justify-self: center;
-    width: 100%;
     align-self: flex-end;
     margin-bottom: .5%;
     justify-content: center;
-    gap: 3%;
+    gap: 4%;
     display: flex;
+    /* border:solid; */
 }
 
 .menu button {
@@ -121,9 +124,58 @@ html { height: 98%; }
 }
 
 .menu button:hover {
-    background-color: var(--menu-button-hover);
+    background-color: var(--secondary);
     color: var(--menu-text-hover);
     cursor: pointer;
+}
+
+.toggle-theme-wrapper {
+    justify-content: right;
+    align-content: flex-start;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.toggle-theme {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+}
+
+.check-box {
+    height: 100%;
+}
+
+.check-box:hover {
+    cursor: pointer;
+}
+
+.toggle-theme input {
+    display: none;
+}
+
+@media (min-width: 1024px){
+    .title {
+        text-align: left;
+        left: 10px;
+    }
+    .bar {
+        height: 36px;
+    }
+    .toggle-theme{
+        height: 30px;
+    }    
+
+    .toggle-theme-wrapper{
+        top: 3px;
+        right: 3px;
+    }
 }
 
 /* Business */
@@ -277,50 +329,4 @@ html { height: 98%; }
     height: 200px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px var(--shadow);
-}
-
-/* DarkMode */
-.darkMode {
-    background-color: rgb(69, 68, 68);
-    color: white;
-    border-color: purple;
-}
-
-.darkMode .card {
-    box-shadow: 5px 5px 3px var(--shadow);
-    background-color: plum;
-    border: solid;
-    border-color: purple;
-    color: black;
-    border-width: 3px;
-    border-radius: 10px;
-}
-
-.darkMode button {
-    background-color: purple;
-    border-color: rgb(74, 1, 74);
-}
-
-.darkMode button:hover {
-    background-color: plum;
-}
-
-.darkMode footer a:link {
-    color: yellow;
-}
-
-.darkMode footer a {
-    color: pink;
-}
-
-.darkMode .card a:link{
-    color: blue;
-}
-
-.darkMode .card a {
-    color: purple;
-}
-
-.darkMode .flip-card-back {
-    background-color: rgb(69, 68, 68);
 }
