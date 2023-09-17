@@ -9,17 +9,23 @@ import CookiePopup from "./cookie-popup";
 import Footer from "./footer";
 
 const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
+    const [darkModeEnabled, setDarkModeEnabled] = useState(true);
+    useEffect(() => {
+        if(localStorage.getItem('cookie-consent') !== 'accepted'){
+            setDarkModeEnabled(false);
+        }
+    })
     return (
         <div>
             <Head>
                 <title>Garrett's Website</title>
                 <link rel="icon" href={Logo.src}></link>
             </Head>
-            <CookiePopup/>
+            <CookiePopup darkMode={setDarkModeEnabled}/>
             <div className="bar">
                 <Title/>
                 <Menu/>
-                <DarkModeButton/>
+                {darkModeEnabled && <DarkModeButton/>}
             </div>
             <div className="card">
                 {children}

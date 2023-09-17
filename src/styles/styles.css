@@ -33,8 +33,13 @@ footer img{
 }
 
 .cookie-popup {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 1;
     color: black;
     background-color: white;
+    opacity: .8;
     width: 50%;
     margin: auto;
     text-align: center;
@@ -133,7 +138,7 @@ html { height: 98%; }
     justify-content: right;
     align-content: flex-start;
     position: absolute;
-    top: 5px;
+    /* top: 5px; */
     right: 5px;
     display:flex;
     flex-direction: row;
@@ -173,7 +178,7 @@ html { height: 98%; }
     }    
 
     .toggle-theme-wrapper{
-        top: 3px;
+        /* top: 3px; */
         right: 3px;
     }
 }
