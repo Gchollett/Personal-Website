@@ -13,12 +13,9 @@
 [data-theme="dark"] {
     --primary-text: black;
     --primary: rgb(69, 68, 68);
-    --secondary: plum;
-    --secondary-text: rgb(105, 1, 105);
-    --menu-button: purple;
-    --menu-text: black;
-    --menu-text-hover: black;
-    --flipcard-text: white;
+    --secondary: rgb(146, 146, 146);
+    --secondary-text: black;
+    --menu-button: black;
 }
 
 footer {
