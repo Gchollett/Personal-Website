@@ -26,19 +26,20 @@ const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
 
 const DarkModeButton = () => {
     const[defaultDark,setDefaultDark] = useState(false)
-    const[darkMode,setDarkMode] = useState(false)
+    const[defaulted,setDefaulted] = useState(false);
     useEffect(()=> {
         const storedTheme = localStorage.getItem("theme");
     
         const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches;
     
         setDefaultDark(storedTheme === "dark" || (storedTheme === null && prefersDark))
-
-        if (defaultDark) {
+        console.log(defaultDark)
+        if (defaultDark && !defaulted) {
             setDark();
             var box = document.getElementById('darkMode')
             // @ts-ignore
             box.checked = box.checked
+            setDefaulted(true);
         }
     })
     return (
