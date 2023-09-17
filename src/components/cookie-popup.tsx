@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react';
 
 const CookiePopup = () => {
-    const [showPopup, setShowPopup] = useState(true);
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleAccept = () => {
-        localStorage.setItem('cookieConsent','accepted')
+        localStorage.setItem('cookie-consent','accepted')
         setShowPopup(false);
     }
 
     const handleReject = () => {
-        localStorage.setItem('cookieConsent','rejected')
         setShowPopup(false);
     }
 
     useEffect(() => {
-        setShowPopup(localStorage.getItem('cookieConsent') === 'rejected')
+        if(localStorage.getItem('cookie-consent') !== 'accepted'){
+            setShowPopup(true);
+        }
     })
 
     return (

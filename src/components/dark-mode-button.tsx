@@ -3,14 +3,14 @@ import lightMoon from "../resources/Moon.png"
 import darkMoon from "../resources/DarkMoon.png"
 
 const setDark = () => {
-    if(localStorage.getItem("cookieConsent") === "accepted"){
+    if(localStorage.getItem("cookie-consent") === "accepted"){
         localStorage.setItem("theme","dark");
         document.documentElement.setAttribute("data-theme","dark");
     }
 }
 
 const setLight = () => {
-    if(localStorage.getItem("cookieConsent") === "accepted"){
+    if(localStorage.getItem("cookie-consent") === "accepted"){
         localStorage.setItem("theme","light");
         document.documentElement.setAttribute("data-theme","light");
     }
@@ -26,9 +26,9 @@ const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
 
 const DarkModeButton = () => {
     const[defaultDark,setDefaultDark] = useState(false)
+    const[darkMode,setDarkMode] = useState(false)
     useEffect(()=> {
         const storedTheme = localStorage.getItem("theme");
-    
     
         const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches;
     
@@ -36,25 +36,21 @@ const DarkModeButton = () => {
 
         if (defaultDark) {
             setDark();
+            var box = document.getElementById('darkMode')
+            // @ts-ignore
+            box.checked = box.checked
         }
-        console.log(defaultDark);
-})
+    })
     return (
         <div className="toggle-theme-wrapper">
-            {/* <span>☀️</span> */}
             <div className={"toggle-theme"}>
                 <input
                     type="checkbox"
                     id="darkMode"
-                    onChange={(e) => {
-                        toggleTheme(e)
-                        console.log("toggled")
-                    }}
+                    onChange={toggleTheme}
                     defaultChecked={defaultDark}
                 /><label htmlFor="darkMode"><img className="check-box" src={darkMoon.src}></img></label>
-                {/* <div className="slider round"></div> */}
             </div>
-            {/* <span>🌒</span> */}
         </div>
     )
 }
