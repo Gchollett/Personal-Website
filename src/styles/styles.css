@@ -84,7 +84,7 @@ html { height: 98%; }
 }
 
 /* Header */
-.bar {
+header {
     flex-direction: row;
     display: flex;
     width: 100%;
@@ -167,7 +167,7 @@ html { height: 98%; }
         text-align: left;
         left: 10px;
     }
-    .bar {
+    header {
         height: 36px;
     }
     .toggle-theme{
