@@ -1,8 +1,9 @@
 import { NextPage } from "next";
 import Roladex, { RoladexItem } from "../../components/roladex";
-import FMacRumors from '../../resources/Records/FMacRumours.png'
-import CMIYGL from '../../resources/Records/Call Me if You Get Lost Record.jpg'
 
+const FMacRumors = "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG"
+const FlowerBoy = "https://upload.wikimedia.org/wikipedia/en/c/c3/Tyler%2C_the_Creator_-_Flower_Boy.png"
+const CMIYGL = "https://img.buzzfeed.com/buzzfeed-static/complex/images/nji2i9pyf3ocnbccuvgc/tyler-the-creator-call-me-if-you-get-lost-album-cover-interview-lead-image.jpg?output-format=jpg&output-quality=auto"
 
 const Records:NextPage = () => {
     return (
@@ -14,10 +15,13 @@ const Records:NextPage = () => {
             </p>
             <Roladex>
                 <RoladexItem>
-                    <img src={FMacRumors.src}></img>
+                    <img src={FMacRumors}></img>
                 </RoladexItem>
                 <RoladexItem>
-                    <img src={CMIYGL.src}></img>
+                    <img src={CMIYGL}></img>
+                </RoladexItem>
+                <RoladexItem>
+                    <img src={FlowerBoy}></img>
                 </RoladexItem>
             </Roladex>
         </>
