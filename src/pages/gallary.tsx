@@ -18,7 +18,7 @@ const Gallary: NextPage = () => {
             <div className="gallary">
                 <div className="gallary-inner">
                     <FlipImage src={meAndBae.src}>
-                        <p>My girlfirend and I failing to make a heart around Leeroy!</p>
+                        <p>My girlfriend and I failing to make a heart around Leeroy!</p>
                     </FlipImage>
                     <FlipImage src={bestie.src}>
                         <p>My bestfriend and I after my second bday dunk!</p>

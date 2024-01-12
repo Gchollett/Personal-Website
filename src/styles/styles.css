@@ -61,11 +61,18 @@ footer img{
     margin: 0 auto;
 }
 
+main, html {
+    width: 100%;
+}
+
 body {
     background-color: var(--primary);
+    /* border:solid; */
     color: var(--primary-text);
     min-height: 100%; 
+    width: 100%;
     position: relative;
+    margin-left: 0;
 }
 
 /* Footer at the bottom of the page */
@@ -74,13 +81,15 @@ html { height: 98%; }
 
 /* Personal Styling */
 .card {
+    padding: 1px 0;
     text-align: center;
     background-color: var(--secondary);
     color: var(--secondary-text);
-    border: solid;
-    border-width: 3px;
+    /* border: solid;
+    border-width: 1.5px; */
     border-radius: 10px;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.616)
+    width: 100%;
+    /* box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.616) */
 }
 
 /* Header */
@@ -121,14 +130,17 @@ header {
 .menu button {
     background-color: var(--menu-button);
     color: var(--menu-text);
-    border-color: var(--secondary-text);
+    border: none;
+    /* border-color: var(--secondary-text); */
     border-radius: 4px;
+    /* box-shadow: 1px 1px 1px black; */
 }
 
 .menu button:hover {
     background-color: var(--secondary);
     color: var(--menu-text-hover);
     cursor: pointer;
+    box-shadow: inset 1px 1px 1px black;
 }
 
 .toggle-theme-wrapper {

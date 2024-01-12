@@ -10,6 +10,7 @@ const Menu = () => {
             <button className={"Buttons"} onClick={() => router.push("/interests")}>{currentPage === "/interests" ? <u>Interests</u> : "Interests"}</button>
             <button className={"Buttons"} onClick={() => router.push("/business")}>{currentPage === "/business" ? <u>Business</u> : "Business"}</button>
             <button className={"Buttons"} onClick={() => router.push("/gallary")}>{currentPage === "/gallary" ? <u>Gallary</u> : "Gallary"}</button>
+            <button className="Buttons" onClick={() => router.push("/projects")}>{currentPage === "/projects"?<u>Projects</u>:"Projects"}</button>
         </div>
     )
 }
