@@ -1,0 +1,43 @@
+/******************************************* Business **************************************************/
+
+.resume {
+    border: none;
+    max-width: 100vw;
+    width: 800px;
+    height: 1250px;
+}
+
+.business-card {
+    display: grid;
+    grid-template: 
+    "a b" auto/2fr 1fr;
+}
+
+.business-description{
+    margin: 50px 20px;
+    font-size: x-large;
+}
+
+.business-resume-container{
+    text-align: center;
+}
+
+.business-preface{
+    text-align: center;
+    font-size: large;
+}
+
+@media (max-width:750px){
+    .business-card{
+        display: block;
+    }
+    .business-description{
+        font-size: larger;
+        text-align: center;
+        margin: 0 20px;
+    }
+    .resume-container{
+        display: flex;
+        align-content: center;
+    }
+}

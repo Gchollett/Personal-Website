@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 import Layout from '../components/layout';
-import '../styles/styles.css';
+import '../styles/main.css';
+import '../styles/home.css';
+import '../styles/gallary.css';
+import '../styles/interests.css'
+import '../styles/business.css'
 
 const CustomApp = ({ Component, pageProps }) => {
     var cookieConsent;

@@ -12,9 +12,7 @@ const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                 <link rel="icon" href={Logo.src}></link>
             </Head>
             <Header/>
-            <div className="card">
-                {children}
-            </div>
+            {children}
             <div style={{paddingTop: "110px"}}></div>
             <Footer/>
         </>

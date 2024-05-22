@@ -1,0 +1,229 @@
+
+.interest h2{
+    text-align: center;
+}
+
+figcaption{
+    text-align: center;
+}
+
+figure{
+    margin: auto 20px;
+}
+
+.dnd-description{
+    padding: 0 20px;
+}
+
+.records-description{
+    font-size: x-large;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.lego-image-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.lego-image-container:first-child{
+    grid-area: a;
+}
+.lego-image-container:nth-child(2){
+    grid-area: c;
+}
+
+.lego-description{
+    font-size: x-large;
+    grid-area: b;
+    margin: 0 20px;
+}
+
+.lego-image {
+    border-radius: 10px;
+    height: 200px;
+    background-color: inherit;
+    margin-bottom: 20px;
+}
+
+.lego-card{
+    display: grid;
+    grid-template:
+        "a b" 400px
+        "a c" auto/1fr 1fr
+}
+
+.magic-cards img {
+    height: 150px;
+    transition-duration: 1s;
+}
+
+.magic-cards img:first-child{
+    rotate: -25deg;
+    z-index: 1;
+    position: relative;
+    left: 15px;
+}
+
+.magic-cards img:nth-child(2){
+    z-index: 0;
+    rotate: -15deg;
+}
+
+.magic-cards img:nth-child(3){
+    position: relative;
+    rotate: 12deg;
+    right:20px;
+}
+
+.magic-cards img:nth-child(4){
+    rotate: -15deg;
+    position: relative;
+    right: 30px;
+}
+
+.magic-cards img:hover{
+    transform: translateY(-10px);
+    transition-duration: 1s;
+}
+
+.magic-card {
+    font-size: x-large;
+    text-align: center;
+}
+
+.magic-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.magic-description{
+    margin: 0 20px;
+}
+
+.interest-nav{
+    font-size: x-large;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.interest-nav p {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.interest-nav p::before{
+    content: "";
+    border-left: solid 0.1rem;
+    padding-right: 10px;
+    
+}
+
+.interest-nav p:first-child::before{
+    visibility: hidden;
+}
+
+.interest-description {
+    width:100%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.interests-container{
+    margin-bottom: 50px;
+}
+
+.dnd-card {
+    display: grid;
+    grid-template:
+    "a b" auto/1fr 1fr;
+}
+
+
+.shelf {
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: rgb(61, 34, 10);
+    background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png);
+    background-color: rgb(88, 59, 26);
+    width: calc(100%-.5);
+}
+
+.shelf img {
+    max-height: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+
+/* Vinyls */
+.roladex {
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: rgb(61, 34, 10);
+    background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png);
+    background-color: rgb(88, 59, 26);
+    width: calc(100%-.5);
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+.roladex-item {
+    margin-right: -100px;
+    margin-left: -100px;
+    transition: transform .4s;
+    transform: scaleX(.03);
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.roladex-item:hover {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: auto;
+    transition: transform .5s;
+    transform: scaleX(1);
+    /* height: 100%; */
+    background-color: unset;
+}
+
+.roladex-item:hover img{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.roladex-item img {
+    transition: transform 0.5s;
+    transform: rotateY(90deg);
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--shadow);
+}
+
+@media (max-width: 750px){
+    .interest-nav{
+        font-size: medium;
+    }
+    .dnd-card,.lego-card,.magic-card{
+        display: block;
+        text-align: center;
+    }
+    .lego-description,.records-description,.magic-description{
+        font-size: large;
+    }
+    .interest-description{
+        font-size: large;
+    }
+}

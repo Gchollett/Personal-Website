@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import DarkModeButton from "./dark-mode-button"
 import Menu from "./menu"
-import Title from "./title"
 import CookiePopup from "./cookie-popup";
 
 const Header = () => {
@@ -14,7 +13,7 @@ const Header = () => {
     return (
         <header>
             <CookiePopup darkMode={setDarkModeEnabled}/>
-            <Title/>
+            <h4 className="title">Garrett Chollett</h4>
             <Menu/>
             {darkModeEnabled && <DarkModeButton/>}
         </header>

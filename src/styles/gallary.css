@@ -1,0 +1,105 @@
+/* Gallary */
+
+.gallary-container {
+  height: max-content;
+}
+
+.gallary-card {
+  display: grid;
+  grid-template:
+  'a b' auto/ 1fr 2.5fr;
+  text-align: center;
+  height: fit-content;
+}
+
+.gallary-description {
+  text-align: left;
+  font-size: x-large;
+  padding: 0 20px;
+}
+
+.gallary {
+    width: 100%;
+    height: max-content;
+}
+
+.gallary-inner {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    
+}
+
+.flip-card img{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.flip-card {
+    position: relative;
+    background-color: transparent;
+    height: 300px;
+    width: 225px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 10px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    box-shadow: 3px 3px 10px var(--shadow);
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: var(--shadow);
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    border-radius: 10px;
+    font-family:'Courier New', Courier, monospace;
+    background-color: var(--primary);
+    color: var(--flipcard-text);
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back p {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
+
+@media (max-width: 750px){
+  .gallary-card{
+    display: block;
+  }
+
+  .gallary-description{
+    font-size: large;
+    text-align: center;
+  }
+}
