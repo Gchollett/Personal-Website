@@ -44,6 +44,8 @@ figure{
     height: 200px;
     background-color: inherit;
     margin-bottom: 20px;
+    max-width: 250px;
+    
 }
 
 .lego-card{
@@ -51,6 +53,14 @@ figure{
     grid-template:
         "a b" 400px
         "a c" auto/1fr 1fr
+}
+
+.magic-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .magic-cards img {
@@ -82,6 +92,19 @@ figure{
     right: 30px;
 }
 
+.magic-cards img:nth-child(5){
+    rotate: 10deg;
+    position: relative;
+    right: 30px;
+    z-index: 1;
+}
+
+.magic-cards img:nth-child(6){
+    rotate: -20deg;
+    position: relative;
+    right: 25px;
+}
+
 .magic-cards img:hover{
     transform: translateY(-10px);
     transition-duration: 1s;
@@ -90,13 +113,6 @@ figure{
 .magic-card {
     font-size: x-large;
     text-align: center;
-}
-
-.magic-cards {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 .magic-description{
@@ -225,5 +241,17 @@ figure{
     }
     .interest-description{
         font-size: large;
+    }
+}
+
+@media (max-width: 450px){
+    .magic-cards img:nth-child(4){
+        right:0;
+    }
+    .magic-cards img:nth-child(5){
+        right:0;
+    }
+    .magic-cards img:nth-child(6){
+        right: 0;
     }
 }

@@ -2,6 +2,8 @@ import teysa from '../../resources/cards/cmm-688-teysa-karlov.png'
 import toggo from '../../resources/cards/cmr-576-toggo-goblin-weaponsmith.png'
 import tana from '../../resources/cards/cmr-537-tana-the-bloodsower.png'
 import mathas from '../../resources/cards/2x2-523-mathas-fiend-seeker.png'
+import extus from '../../resources/cards/stx-323-extus-oriq-overlord.png'
+import sol from '../../resources/cards/pip-887-sol-ring.png'
 
 const Magic = () => {
     return(
@@ -22,6 +24,8 @@ const Magic = () => {
                     <img src={toggo.src}/>
                     <img src={tana.src}/>
                     <img src={mathas.src}/>
+                    <img src={sol.src}/>
+                    <img src={extus.src}/>
                 </div>
             </div>
         </div>

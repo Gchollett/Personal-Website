@@ -2,7 +2,7 @@
 
 .resume {
     border: none;
-    max-width: 100vw;
+    max-width: 50vw;
     width: 800px;
     height: 1250px;
 }
@@ -10,7 +10,7 @@
 .business-card {
     display: grid;
     grid-template: 
-    "a b" auto/2fr 1fr;
+    "a b" auto/50vw 50vw;
 }
 
 .business-description{
@@ -27,7 +27,16 @@
     font-size: large;
 }
 
-@media (max-width:750px){
+.resume-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1000px){
+    .resume {
+        max-width: 100vh;
+    }
     .business-card{
         display: block;
     }
@@ -35,9 +44,5 @@
         font-size: larger;
         text-align: center;
         margin: 0 20px;
-    }
-    .resume-container{
-        display: flex;
-        align-content: center;
     }
 }
