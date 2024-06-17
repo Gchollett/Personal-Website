@@ -35,14 +35,14 @@ const Legos = () => {
                 </div>
                 <div className="lego-image-container">
                     {
-                        legos.slice(0,legos.length/2)?.map((l,i) => {
+                        legos.slice(0,legos.length/1.5)?.map((l,i) => {
                             return(<img className="lego-image" key={i} src={l.set.set_img_url}/>)
                         })
                     }
                 </div>
                 <div className="lego-image-container">
                     {
-                        legos.slice(legos.length/2,legos.length)?.map((l,i) => {
+                        legos.slice(legos.length/1.5,legos.length)?.map((l,i) => {
                             return(<img className="lego-image" key={i} src={l.set.set_img_url}/>)
                         })
                     }

@@ -95,7 +95,7 @@ header {
     display: flex;
 }
 
-.menu a {
+header a {
     color:inherit;
     text-decoration: none;
 }
@@ -183,6 +183,6 @@ html{
     scroll-behavior: smooth;
 }
 
-#gallary,#interests,#business{
+#gallary,#interests,#business,#projects,#home{
     scroll-margin: 60px;
 }

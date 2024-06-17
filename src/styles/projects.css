@@ -1,0 +1,43 @@
+.projects-description{
+    width: 100%;
+    text-align: center;
+}
+
+.project-container h2{
+    text-align: center;
+}
+
+.project-housing{
+    display: grid;
+    grid-template: "a b" auto/1fr 1fr;
+}
+
+.project-description{
+    grid-area: b;
+    margin: 0 auto;
+    width: 90%;
+    font-size: xx-large;
+}
+
+.link-preview a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.link-preview img{
+    width: 90%;
+    border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+    .project-description{
+        font-size: larger;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-description{
+        font-size: small;
+    }
+}

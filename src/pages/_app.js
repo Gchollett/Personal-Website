@@ -5,6 +5,7 @@ import '../styles/home.css';
 import '../styles/gallary.css';
 import '../styles/interests.css'
 import '../styles/business.css'
+import '../styles/projects.css'
 
 const CustomApp = ({ Component, pageProps }) => {
     var cookieConsent;

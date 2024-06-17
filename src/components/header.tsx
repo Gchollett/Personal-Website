@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <header>
             <CookiePopup darkMode={setDarkModeEnabled}/>
-            <h4 className="title">Garrett Chollett</h4>
+            <a href="#home"><h4 className="title">Garrett Chollett</h4></a>
             <Menu/>
             {darkModeEnabled && <DarkModeButton/>}
         </header>

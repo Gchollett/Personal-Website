@@ -2,7 +2,7 @@ import firstDunk from '../resources/gallary/FountainDunk1.png'
 
 const Home = () => {
     return(
-        <div className='home-container'>
+        <div id="home" className='home-container'>
             <h1>Welcome to My Website!</h1>
             <div className="home-card">
                 <figure>

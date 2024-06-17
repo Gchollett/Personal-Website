@@ -5,6 +5,7 @@ const Menu = () => {
         <div className="menu">
             <a href="#gallary">Gallary</a>
             <a href="#interests">Interests</a>
+            <a href="#projects">Projects</a>
             <a href="#business">Business</a>
         </div>
     )
