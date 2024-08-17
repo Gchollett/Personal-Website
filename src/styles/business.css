@@ -10,7 +10,7 @@
 .business-card {
     display: grid;
     grid-template: 
-    "a b" auto/50vw 50vw;
+    "a b" auto/50vw 48vw;
 }
 
 .business-description{
